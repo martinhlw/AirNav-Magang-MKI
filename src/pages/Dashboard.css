@@ -1,0 +1,55 @@
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+  }
+  
+  .quick-access {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .map-section, .absence-section, .chart-section {
+    width: 30%;
+    height: 200px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .ongoing {
+    background-color: #ffcc00;
+    color: white;
+  }
+  

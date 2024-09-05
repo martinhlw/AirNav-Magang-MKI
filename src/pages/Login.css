@@ -1,0 +1,81 @@
+.login-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-image {
+    flex: 1;
+    background-image: url('../assets/bgairnav.png'); /* Pastikan path ini benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 50%; /* Membatasi lebar login container hingga 50% */
+    margin-left: auto; /* Menempatkan login container di sisi kiri */
+  }
+  
+  .login-logo {
+    margin-bottom: 20px; /* Spasi di bawah logo */
+  }
+  
+  .login-logo img {
+    max-width: 150px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto; /* Memastikan rasio aspek tetap */
+  }  
+  
+  h2 {
+    margin-bottom: 15px; /* Spasi di bawah judul */
+  }
+  
+  p {
+    margin-bottom: 20px; /* Spasi di bawah teks sambutan */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Menyelaraskan label dan input ke kiri */
+    width: 100%; /* Memastikan form-group mengambil lebar penuh */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; /* Spasi di atas input */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #002244;
+  }
+  
+  a {
+    color: #003366;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+  }
+  
