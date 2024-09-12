@@ -1,55 +1,100 @@
-.dashboard-container {
-    padding: 20px;
-  }
-  
-  .top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #003366;
-    color: white;
-  }
-  
-  .quick-access {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-  }
-  
-  .dashboard-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .map-section, .absence-section, .chart-section {
-    width: 30%;
-    height: 200px;
-    background-color: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  .status {
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .ongoing {
-    background-color: #ffcc00;
-    color: white;
-  }
-  
+/* src/Dashboard.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Full screen background */
+.dashboard {
+  background-color: #f0f0f5; /* Warna putih keabuan */
+  min-height: 100vh; /* Pastikan background full layar */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation styles */
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 kolom untuk 10 navigasi */
+  gap: 10px; /* Mengurangi gap untuk mengakomodasi 10 kolom */
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  background-color: #003366; /* Warna biru tua */
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  padding-top: 100%; /* Membuat elemen berbentuk persegi */
+  position: relative;
+}
+
+.nav-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px; /* Ukuran font bisa disesuaikan */
+}
+
+/* Card Section */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Memastikan card bisa pindah baris jika diperlukan */
+  gap: 15px; /* Jarak antar card */
+  margin-bottom: 100px; /* Menambahkan margin bawah untuk jarak dengan tabel */
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 10px); /* Membuat card berbentuk persegi panjang dan menyesuaikan jarak */
+  height: 400px; /* Menentukan tinggi card agar lebih panjang */
+  display: flex;
+  flex-direction: column; /* Mengatur layout vertikal */
+  overflow: hidden; /* Menjaga gambar tetap dalam card */
+}
+
+.card img {
+  width: 100%; /* Menyesuaikan lebar gambar dengan lebar card */
+  height: 100%; /* Mengisi seluruh tinggi card */
+  object-fit: cover; /* Menjaga gambar tetap utuh dan menyesuaikan ukuran */
+}
+
+.card .title {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f8f8f8; /* Warna latar belakang teks */
+  border-bottom: 1px solid #ddd; /* Garis batas di bawah teks */
+}
+
+/* Table Section */
+.table-section {
+  margin-top: 100px; /* Menambahkan margin atas untuk jarak dari card */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+}

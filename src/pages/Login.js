@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import logo from '../assets/logo.png'; // Pastikan path ini benar
 
 const Login = () => {
-  // State untuk menyimpan nilai input
+  const navigate = useNavigate(); // Inisialisasi useNavigate
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Fungsi untuk menangani perubahan input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name === 'username') {
@@ -17,15 +17,10 @@ const Login = () => {
     }
   };
 
-  // Fungsi untuk menangani pengiriman form
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lakukan aksi login, misalnya panggil API atau verifikasi
-    console.log('Username:', username);
-    console.log('Password:', password);
-    // Reset form setelah submit
-    setUsername('');
-    setPassword('');
+    // Alihkan ke dashboard langsung tanpa memeriksa input
+    navigate('/dashboard');
   };
 
   return (
@@ -38,7 +33,7 @@ const Login = () => {
           <img src={logo} alt="AirNav Logo" style={{ maxWidth: '150px', height: 'auto' }} />
         </div>
         <h2>AirNav Indonesia</h2>
-        <p>Welcome back, Please sign in to your account.</p>
+        <p>Welcome back! Please sign in to your account.</p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username (Email)</label>
@@ -49,7 +44,6 @@ const Login = () => {
               placeholder="username@mail.com"
               value={username}
               onChange={handleInputChange}
-              required
             />
           </div>
           <div className="form-group">
@@ -61,7 +55,6 @@ const Login = () => {
               placeholder="********"
               value={password}
               onChange={handleInputChange}
-              required
             />
           </div>
           <button type="submit">Login</button>
